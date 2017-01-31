@@ -1,0 +1,46 @@
+.contact {
+    background-color: var(--accent-one);
+    position: relative;
+    overflow: hidden
+}
+
+form {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    color: #fff;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    position: relative;
+    z-index: 3;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: none;
+    padding: 8px;
+    outline: none;
+    font-size: 13px;
+    margin: 10px 0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.73);
+}
+
+textarea {
+    min-height: 200px;
+}
+
+.submit_btn {
+    background: var(--accent-two);
+    color: #fff;
+}
+
+.kerron {
+    position: absolute;
+    width: 500px;
+    z-index: 1;
+    bottom: -30px;
+    left: -100px;
+}

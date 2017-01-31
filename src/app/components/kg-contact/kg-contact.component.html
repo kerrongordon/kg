@@ -1,0 +1,21 @@
+<h2 class="header">Stay in touch</h2>
+<section id="contact" class="contact">
+    <img src="./assets/img/kerronb.svg" class="kerron" alt="kerron gordon">
+    <div class="wrapper">
+        <form #userMessage="ngForm" (ngSubmit)="onSubmit(userMessage.value)">
+            <div class="yname_group">
+                <label for="yname">Your Name</label>
+                <input id="yname" type="text" required name="name" ngModel>
+            </div>
+            <div class="yemail_group">
+                <label for="yemail">Your Email</label>
+                <input id="yemail" type="email" required name="email" ngModel>
+            </div>
+            <div class="ymessage_group">
+                <label for="ymessage">Your Message</label>
+                <textarea id="ymessage" required name="message" ngModel></textarea>
+            </div>
+            <button type="submit" class="btn submit_btn">Send Message</button>
+        </form>
+    </div>
+</section>
