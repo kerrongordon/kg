@@ -1,13 +1,33 @@
 .hero {
-    background: var(--accent-one);
+    background-color: var(--accent-one);
     width: 100%;
-    height: 600px;
+    height: 300px;
+    transition: var(--transition);
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 1.1rem;
     text-align: center;
-    color: #fff;
+    color: var(--font-coac);
     font-weight: 300;
     font-family: 'Cinzel Decorative', cursive;
+    transition: var(--transition);
+}
+
+@media all and (min-width: 500px) {
+    .hero {
+        height: 450px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    .hero {
+        height: 600px;
+    }
+    h1 {
+        font-size: 3.1rem;
+    }
 }

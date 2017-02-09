@@ -9,7 +9,7 @@
 }
 
 .about_skill_item {
-    width: 38%;
+    width: 100%;
     margin: 0 30px;
 }
 
@@ -26,6 +26,7 @@
     display: block;
     background: var(--accent-one);
     border-radius: 5px;
+    transition: var(--transition);
 }
 
 h4 {
@@ -42,9 +43,23 @@ h4 span {
     font-size: .7rem;
     background: var(--accent-two);
     color: #fff;
-    width: 27px;
-    margin: -3px -10px 0 0;
-    padding: 6px 0;
+    width: 23px;
+    height: 23px;
+    margin: 9px -10px 0 0;
     border-radius: 50%;
     text-align: center;
+    line-height: 23px;
+}
+
+@media all and (min-width: 500px) {
+    .about_skill_item {
+        width: 40%;
+        margin: 0 20px;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    .about_skill_item {
+        width: 38%;
+    }
 }

@@ -9,16 +9,15 @@ import { KgPortfoliosService } from '../../services/kg-portfolios.service';
 })
 export class KgCardComponent implements OnInit {
 
-  @Input() portfolios: any[];
+  private portfolios: any;
+  private key: any;
 
-  constructor(
-    private _kgPortfoliosService: KgPortfoliosService
-  ) {
-
-  }
+  constructor(private _kgPortfoliosService: KgPortfoliosService) { }
 
   ngOnInit() {
-    this.portfolios = this._kgPortfoliosService.getPortfolios();
+    return this._kgPortfoliosService.getPortfolios().subscribe(
+      (data) => this.portfolios = data
+    );
   }
 
 }

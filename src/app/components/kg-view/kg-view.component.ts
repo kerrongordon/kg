@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { KgPortfoliosService } from '../../services/kg-portfolios.service';
 
@@ -10,14 +10,15 @@ import { KgPortfoliosService } from '../../services/kg-portfolios.service';
 })
 export class KgViewComponent implements OnInit {
 
-  title: string;
-  content: string;
-  imgUrl: string;
+  private title: string;
+  private content: any;
+  private imgUrl: string;
+  private thumb: string;
 
   constructor(
     private route: ActivatedRoute,
     private _kgPortfoliosService: KgPortfoliosService
-  ) { }
+  ) {   }
 
   ngOnInit() {
     setTimeout(() => {
@@ -25,15 +26,20 @@ export class KgViewComponent implements OnInit {
     }, 100);
 
     const id = this.route.snapshot.params['id'];
-    const portfolios = this._kgPortfoliosService.getPortfolios();
 
-    const getId = portfolios.filter((portfolio) => {
-      return portfolio.id === id;
+    return this._kgPortfoliosService.getPortfolios().subscribe(
+      (data) => {
+
+        const getId = data.filter((portfolio) => {
+          return portfolio.$key === id;
+        });
+
+        this.title = getId[0].title;
+        this.content = getId[0].content;
+        this.imgUrl = getId[0].thumbnail;
+        this.thumb = getId[0].cardimg;
+
     });
-
-    this.title = getId[0].title;
-    this.content = getId[0].content;
-    this.imgUrl = getId[0].imgUrl;
 
   }
 

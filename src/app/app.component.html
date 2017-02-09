@@ -1,8 +1,1 @@
-<app-kg-hero></app-kg-hero>
-<app-kg-avatar></app-kg-avatar>
-<app-kg-about></app-kg-about>
-<div class="change">
-    <router-outlet></router-outlet>
-</div>
-<app-kg-contact></app-kg-contact>
-<app-kg-footer></app-kg-footer>
+<router-outlet (activate)="onActivate($event, outlet)" #outlet></router-outlet>

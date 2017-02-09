@@ -6,7 +6,6 @@
     color: #fff;
     background-color: var(--accent-two);
     padding-left: 40px;
-    box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.37);
     position: relative;
     z-index: 3;
 }

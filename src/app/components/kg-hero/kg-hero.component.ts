@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { KgDataService } from '../../services/kg-data.service';
 
 @Component({
   selector: 'app-kg-hero',
   templateUrl: './kg-hero.component.html',
-  styleUrls: ['./kg-hero.component.css']
+  styleUrls: ['./kg-hero.component.css'],
+  providers: [KgDataService]
 })
 export class KgHeroComponent implements OnInit {
 
   private title: string;
 
-  constructor() { }
+  constructor(private _kgDataService: KgDataService) { }
 
   ngOnInit() {
-    this.title = 'Kerron Gordon';
+    this.title = this._kgDataService.getSiteTitle();
   }
 
 }

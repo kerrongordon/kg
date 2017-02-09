@@ -1,12 +1,11 @@
 <article class="card" *ngFor="let portfolio of portfolios">
-    <div class="card_img">
-        <img src="{{ portfolio.imgUrl }}" alt="">
-        <div class="card_title">
-            <title>{{ portfolio.title }}</title>
+    <a routerLink="/portfolio/{{portfolio.$key}}">
+        <div class="card_img">
+            <img src="{{ portfolio.cardimg }}" alt="">
+            <div class="card_title">
+                <title>{{ portfolio.title }}</title>
+            </div>
         </div>
-    </div>
-    <div class="card_infor">
-        <p>{{ portfolio.content }}</p>
-    </div>
-    <div class="card_btn"><a routerLink="/portfolio/{{portfolio.id}}">Read More</a></div>
+        <div class="card_btn"><a routerLink="/portfolio/{{portfolio.$key}}">View Project</a></div>
+    </a>
 </article>
