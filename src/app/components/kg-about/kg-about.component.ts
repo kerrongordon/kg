@@ -14,7 +14,7 @@ export class KgAboutComponent implements OnInit {
   constructor(private _kgDataService: KgDataService) { }
 
   ngOnInit() {
-    this.content = this._kgDataService.getSiteDescription();
+    this._kgDataService.getSiteDescription().subscribe(data => this.content = data.description);
   }
 
 }

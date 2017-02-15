@@ -14,7 +14,7 @@ export class KgSkillComponent implements OnInit {
   constructor(private _kgDataService: KgDataService) { }
 
   ngOnInit() {
-    this.skills = this._kgDataService.getSiteSkills();
+    this._kgDataService.getSiteSkills().subscribe(data => this.skills = data);
   }
 
 }

@@ -16,7 +16,6 @@
 
 .card_img {
     position: relative;
-    height: 200px;
     overflow: hidden;
 }
 
@@ -35,10 +34,6 @@
     position: absolute;
     bottom: 0;
     padding: 20px;
-}
-
-.card_btn {
-    border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
 .card_btn a {
