@@ -145,6 +145,7 @@ table {
     --bg-color: #ecf0f1;
     --font-cobg: #6b7c93;
     --font-coac: #fff;
+    --link-color: #09a0f6;
     --transition: all .3s ease-in-out;
 }
 
@@ -153,6 +154,8 @@ body {
     margin: 0;
     background-color: var(--bg-color);
     font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--font-cobg);
 }
 
 .centerItem {
@@ -185,7 +188,7 @@ blockquote {
 }
 
 a {
-    color: #09a0f6;
+    color: var(--link-color);
     font-weight: normal;
     text-decoration: none;
     transition: all 0.3s;
@@ -208,11 +211,24 @@ ol {
     line-height: 28px;
     margin-bottom: 16px;
     margin-top: 0px;
+    margin-left: 30px;
+}
+
+ul a,
+ol a {
+    color: var(--font-cobg);
 }
 
 ul li,
 ol li {
     line-height: 28px;
+    color: var(--font-cobg);
+    list-style: disc;
+}
+
+ul li:hover a,
+ol li:hover a {
+    color: var(--link-color);
 }
 
 small {
@@ -366,7 +382,6 @@ img[alt="cardimg"] {
 p {
     font-size: 14px;
     line-height: 24px;
-    color: rgba(0, 0, 0, 0.74);
     font-weight: 400;
     letter-spacing: 0.2px;
 }

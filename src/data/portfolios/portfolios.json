@@ -1,14 +1,11 @@
 {
-  "portfolios": [
-    {
-      "title": "Probatus",
-      "link": "probatus",
-      "thumbnail": "thumb.jpg"
-    },
-    {
-      "title": "Gsetri",
-      "link": "gsetri",
-      "thumbnail": "thumb.jpg"
-    }
-  ]
+    "portfolios": [{
+            "title": "Probatus",
+            "link": "probatus"
+        },
+        {
+            "title": "Gsetri",
+            "link": "gsetri"
+        }
+    ]
 }

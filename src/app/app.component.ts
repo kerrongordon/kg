@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+
+  constructor(private pageTitle: Title) {}
+
   onActivate(e, outlet) {
     window.scrollTo(0, 0);
+    this.pageTitle.setTitle(e.title);
   }
 }

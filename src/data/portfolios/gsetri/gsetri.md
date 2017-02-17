@@ -1,7 +1,7 @@
-### Tools Use to build GSETRI
----
 
-gsetri is a static html5 and css3 template build with grunt and jekyll
+# Grenada Solar Energy Technology Research Institute
+
+Grenada Solar Energy Technology Research Institute is a static html5 and css3 template build with grunt and jekyll
 
 * [jekyll](https://jekyllrb.com) - Transform your plain text into static websites and blogs.
 * [yeoman](http://yeoman.io) - The web's scaffolding tool for modern webapps
@@ -12,7 +12,5 @@ gsetri is a static html5 and css3 template build with grunt and jekyll
 * [firebase](https://firebase.google.com) - Use for hosting gsetri preview site
 * [Github](https://github.com/kerrongordon/gsetri) - all the code is open and can be downloaded here
 * [live preview](https://gsetri-43707.firebaseapp.com) - live preview of gsetri
-
----
 
 ![image](./data/portfolios/gsetri/desktop.jpg)

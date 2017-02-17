@@ -1,9 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MarkdownToHtmlPipe } from 'markdown-to-html-pipe';
-import { MarkdownModule } from 'angular2-markdown';
+// import { MarkdownToHtmlPipe } from 'markdown-to-html-pipe';
+// import { MarkdownModule } from 'angular2-markdown';
+import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
 import { RouteRoutingModule, routingComponents } from './route/route-routing.module';
 import { AppComponent } from './app.component';
 import { KgHeroComponent } from './components/kg-hero/kg-hero.component';
@@ -29,17 +30,18 @@ import { KgContactComponent } from './components/kg-contact/kg-contact.component
     KgCardComponent,
     routingComponents,
     KgFooterComponent,
-    KgContactComponent,
-    MarkdownToHtmlPipe
+    KgContactComponent
+    // MarkdownToHtmlPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouteRoutingModule,
-    MarkdownModule.forRoot()
+    MarkdownToHtmlModule.forRoot()
+    // MarkdownModule.forRoot()
   ],
-  providers: [],
+  providers: [Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KgHomeComponent implements OnInit {
 
+  private title = 'Kerron Gordon';
+
   constructor() {
    }
 
@@ -15,6 +17,5 @@ export class KgHomeComponent implements OnInit {
       document.getElementById('home').classList.add('is-active');
     }, 100);
   }
-
 
 }
