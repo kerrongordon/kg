@@ -13,6 +13,8 @@ export class KgViewComponent implements OnInit {
 
   private title: string;
   private mdLink: string;
+  private imgLink: string;
+  private goBack: string;
 
   constructor(private route: ActivatedRoute, private _KgDataService: KgDataService) {   }
 
@@ -24,8 +26,9 @@ export class KgViewComponent implements OnInit {
     const page = this.route.snapshot.params['id'];
 
     this.title = page;
-    this.mdLink = './data/portfolios/' + page + '/' + page + '.md';
-
+    this.mdLink = `/data/portfolios/${page}/${page}.md`;
+    this.imgLink = `/data/portfolios/${page}/desktop.jpg`;
+    this.goBack = `/#portfolio`;
   }
 
 }

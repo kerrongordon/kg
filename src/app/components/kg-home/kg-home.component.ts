@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-kg-home',
@@ -9,12 +10,17 @@ export class KgHomeComponent implements OnInit {
 
   private title = 'Kerron Gordon';
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
    }
 
   ngOnInit() {
+    const page = this.route.fragment['_value'];
+
     setTimeout(() => {
       document.getElementById('home').classList.add('is-active');
+      if (page) {
+        window.location.href = `#${page}`;
+      }
     }, 100);
   }
 

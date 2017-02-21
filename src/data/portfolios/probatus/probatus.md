@@ -9,6 +9,4 @@ Probatus is a static html5 and css3 template build with Google Web Starter Kit
 * [Github](https://github.com/kerrongordon/Probatus) - all the code is open and can be downloaded here
 * [live preview](https://probatus-ceb59.firebaseapp.com) - live preview of Probatus
 
----
 
-![image](./data/portfolios/probatus/desktop.jpg)

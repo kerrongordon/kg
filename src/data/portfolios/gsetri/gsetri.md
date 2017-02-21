@@ -13,4 +13,4 @@ Grenada Solar Energy Technology Research Institute is a static html5 and css3 te
 * [Github](https://github.com/kerrongordon/gsetri) - all the code is open and can be downloaded here
 * [live preview](https://gsetri-43707.firebaseapp.com) - live preview of gsetri
 
-![image](./data/portfolios/gsetri/desktop.jpg)
+
