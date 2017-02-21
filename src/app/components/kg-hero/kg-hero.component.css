@@ -1,6 +1,6 @@
 .hero {
     background-color: var(--accent-one);
-    background: url(./assets/img/hero.jpg) 50% 50% / cover;
+    background: url(/assets/img/hero.jpg) 50% 50% / cover;
     width: 100%;
     height: 300px;
     transition: var(--transition);

@@ -19,7 +19,7 @@
 
 .ribbon {
     background-color: var(--accent-one);
-    background: url(./assets/img/hero.jpg) 50% 70% / cover;
+    background: url(/assets/img/hero.jpg) 50% 70% / cover;
     width: 100%;
     height: 45vh;
     flex-shrink: 0;
