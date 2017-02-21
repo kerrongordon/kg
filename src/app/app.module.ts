@@ -2,8 +2,6 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-// import { MarkdownToHtmlPipe } from 'markdown-to-html-pipe';
-// import { MarkdownModule } from 'angular2-markdown';
 import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
 import { RouteRoutingModule, routingComponents } from './route/route-routing.module';
 import { AppComponent } from './app.component';

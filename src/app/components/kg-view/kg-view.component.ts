@@ -25,7 +25,7 @@ export class KgViewComponent implements OnInit {
     const page = this.route.snapshot.params['id'];
 
     this.title = page;
-    this.mdLink = '/data/portfolios/' + page + '/' + page + '.md';
+    this.mdLink = `/data/portfolios/${page}/${page}.md`;
     this.imgLink = `/data/portfolios/${page}/desktop.jpg`;
   }
 
