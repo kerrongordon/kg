@@ -1,5 +1,4 @@
-
-# Grenada Solar Energy Technology Research Institute
+### Grenada Solar Energy Technology Research Institute
 
 Grenada Solar Energy Technology Research Institute is a static html5 and css3 template build with grunt and jekyll
 
