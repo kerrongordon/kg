@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, AfterViewInit, AfterContentChecked, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 import { KgDataService } from '../../services/kg-data.service';
 import 'rxjs/add/operator/filter';
 
@@ -11,23 +12,28 @@ import 'rxjs/add/operator/filter';
 })
 export class KgViewComponent implements OnInit, AfterViewInit, AfterContentChecked, OnDestroy {
 
-  private title = 'loading page...' ;
+  private title: string;
   private mdLink: string;
   private imgLink: string;
   private dataLoad: any;
   thispage = null;
   link = null;
 
-  constructor(private route: ActivatedRoute, private router: Router, private _KgDataService: KgDataService) {   }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private titleService: Title,
+    private _KgDataService: KgDataService) {   }
 
   ngOnInit() {
     const page = this.route.snapshot.params['id'];
-
     this.dataLoad = this._KgDataService.getPortfolios().subscribe(data => {
       this.thispage = data.portfolios.filter(el => el.link === page);
       if (this.thispage.length === 0) { setTimeout(() => {this.router.navigate(['/home']);}, 500); return; };
       this.link = this.thispage['0'].link;
       this.title = this.thispage['0'].title;
+      const title = `${this.title} | Portfolio`;
+      this.titleService.setTitle( title );
     });
 
   }
@@ -37,6 +43,7 @@ export class KgViewComponent implements OnInit, AfterViewInit, AfterContentCheck
   }
 
   ngAfterContentChecked() {
+
     if (this.link === null) {
       this.mdLink = '/data/loading.md';
       this.imgLink = '/assets/img/blank.png';
@@ -48,6 +55,7 @@ export class KgViewComponent implements OnInit, AfterViewInit, AfterContentCheck
       this.imgLink = `/data/portfolios/${this.link}/desktop.jpg`;
       return;
     }  
+
   }
 
   ngOnDestroy() {
