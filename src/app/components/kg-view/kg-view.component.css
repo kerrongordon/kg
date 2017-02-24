@@ -1,4 +1,7 @@
 .headbar {
+	background-color: var(--accent-one);
+    position: fixed;
+    top: 0;
     width: 100%;
     height: 56px;
     margin: 0;
@@ -19,9 +22,9 @@
 
 .ribbon {
     background-color: var(--accent-one);
-    background: url(/assets/img/hero.jpg) 50% 70% / cover;
+    /*background: url(/assets/img/hero.jpg) 50% 70% / cover;*/
     width: 100%;
-    height: 45vh;
+    height: 300px;
     flex-shrink: 0;
 }
 
@@ -60,4 +63,21 @@
 
 img {
     width: 100%;
+}
+
+.gohome {
+    float: left;
+    margin: 13px 5px;
+}
+
+@media all and (min-width: 500px) {
+    .ribbon {
+        height: 350px;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    .ribbon {
+        height: 400px;
+    }
 }

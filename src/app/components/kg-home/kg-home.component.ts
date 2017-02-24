@@ -21,6 +21,7 @@ export class KgHomeComponent implements OnInit {
       if (page) {
         window.location.href = `#${page}`;
       }
+      return;
     }, 100);
   }
 
