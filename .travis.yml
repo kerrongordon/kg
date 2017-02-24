@@ -12,6 +12,7 @@ after_success:
     - ng build -prod --aot --verbose
     - sw-precache --root=dist --static-file-globs='dist/**/*.*'
     - firebase deploy --token "$FIREBASE_TOKEN"
+    - github-pages -r kerrongordon/kerrongordon.github.io -t $GH_TOKEN ./dist
 
 
 
