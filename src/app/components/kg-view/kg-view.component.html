@@ -12,7 +12,7 @@
     </div>
 
     <div class="page">
-        <div class="page_in">
+        <div class="page_in" *ngIf="mdLink">
             <div markdown-to-html [src]="mdLink"></div>
             <img [src]="imgLink" alt="">
         </div>

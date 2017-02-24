@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { KgDataService } from '../../services/kg-data.service';
 
 @Component({
@@ -7,14 +7,19 @@ import { KgDataService } from '../../services/kg-data.service';
   styleUrls: ['./kg-about.component.css'],
   providers: [KgDataService]
 })
-export class KgAboutComponent implements OnInit {
+export class KgAboutComponent implements OnInit, OnDestroy {
 
   private content: string;
+  private aboutData: any;
 
   constructor(private _kgDataService: KgDataService) { }
 
   ngOnInit() {
-    this._kgDataService.getSiteDescription().subscribe(data => this.content = data.description);
+    this.aboutData = this._kgDataService.getSiteDescription().subscribe(data => this.content = data.description);
+  }
+
+  ngOnDestroy() {
+    this.aboutData.unsubscribe();
   }
 
 }
