@@ -16,6 +16,8 @@ export class KgViewComponent implements OnInit, AfterViewInit, AfterContentCheck
   private mdLink: string;
   private imgLink: string;
   private dataLoad: any;
+  private url: string;
+  public loaded = false;
   thispage = null;
   link = null;
 
@@ -29,9 +31,12 @@ export class KgViewComponent implements OnInit, AfterViewInit, AfterContentCheck
     const page = this.route.snapshot.params['id'];
     this.dataLoad = this._KgDataService.getPortfolios().subscribe(data => {
       this.thispage = data.portfolios.filter(el => el.link === page);
-      if (this.thispage.length === 0) { setTimeout(() => {this.router.navigate(['/home']);}, 500); return; };
+      if (this.thispage.length === 0) { setTimeout(() => {this.router.navigate(['/home']); }, 500); return; };
       this.link = this.thispage['0'].link;
       this.title = this.thispage['0'].title;
+      this.mdLink = `/data/portfolios/${this.link}/${this.link}.md`;
+      this.imgLink = `/data/portfolios/${this.link}/desktop.jpg`;
+      this.url = this.thispage['0'].url;
       const title = `${this.title} | Portfolio`;
       this.titleService.setTitle( title );
     });
@@ -43,19 +48,12 @@ export class KgViewComponent implements OnInit, AfterViewInit, AfterContentCheck
   }
 
   ngAfterContentChecked() {
+    if (!this.link) { this.loaded = true; } else
+    if (this.link.length) { setTimeout(() => { this.loaded = false; }, 500); return; }
+  }
 
-    if (this.link === null) {
-      this.mdLink = '/data/loading.md';
-      this.imgLink = '/assets/img/blank.png';
-      return;
-    } 
-
-    if (this.link) {
-      this.mdLink = `/data/portfolios/${this.link}/${this.link}.md`;
-      this.imgLink = `/data/portfolios/${this.link}/desktop.jpg`;
-      return;
-    }  
-
+  openlink(link): void {
+    window.open(link);
   }
 
   ngOnDestroy() {

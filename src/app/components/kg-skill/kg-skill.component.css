@@ -30,11 +30,12 @@
 }
 
 h4 {
-    color: #555;
+    color: rgba(var(--font-cobg), 0.9);
     margin: 20px 0 -8px 0;
-    font-size: 1rem;
+    font-size: 14px;
     text-align: left;
     font-weight: 300;
+    font-style: italic;
     font-family: "Cinzel Decorative", cursive;
 }
 

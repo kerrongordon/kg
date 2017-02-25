@@ -1,5 +1,5 @@
 .headbar {
-	background-color: var(--accent-one);
+    background-color: var(--accent-one);
     position: fixed;
     top: 0;
     width: 100%;
@@ -13,8 +13,8 @@
 }
 
 .page_title {
-    font-size: 20px;
-    line-height: 2.8;
+    font-size: 18px;
+    line-height: 3;
     font-weight: 400;
     letter-spacing: .02em;
     text-transform: uppercase;
@@ -36,7 +36,7 @@
 
 .page_in {
     background: #fff;
-    max-width: 900px;
+    max-width: 1050px;
     margin: 0 auto;
     margin-top: -180px;
     border-radius: 2px;
@@ -68,6 +68,27 @@ img {
 .gohome {
     float: left;
     margin: 13px 5px;
+}
+
+.openlink {
+    position: fixed;
+    z-index: 500;
+    right: 50px;
+    bottom: 50px;
+}
+
+.openlink svg {
+    fill: var(--font-coac);
+    width: 20px;
+    height: 20px;
+}
+
+.openlink .btn {
+    background-color: var(--accent-two);
+    color: var(--font-coac);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
 }
 
 @media all and (min-width: 500px) {

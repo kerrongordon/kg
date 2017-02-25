@@ -1,15 +1,18 @@
 {
     "portfolios": [{
             "title": "Probatus",
-            "link": "probatus"
+            "link": "probatus",
+            "url": "https://probatus-ceb59.firebaseapp.com"
         },
         {
             "title": "Grenada Solar Energy Technology Research Institute",
-            "link": "gsetri"
+            "link": "gsetri",
+            "url": "https://gsetri-43707.firebaseapp.com"
         },
         {
             "title": "St Rose Modern Secondary School",
-            "link": "strose"
+            "link": "strose",
+            "url": "http://strosemodern.org"
         }
     ]
 }

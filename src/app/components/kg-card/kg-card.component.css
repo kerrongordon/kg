@@ -38,7 +38,7 @@
     padding: 20px;
 }
 
-.card_btn{
+.card_btn {
     background: none;
     border: none;
     display: block;
@@ -57,8 +57,8 @@ a {
 }
 
 title {
-    display: block;
-    font-size: 24px;
+    display: inline-block;
+    font-size: 15px;
     font-weight: 300;
     line-height: normal;
     color: #fff;
@@ -66,14 +66,24 @@ title {
     text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.7);
 }
 
+.truncat {
+    width: 200px;
+}
+
 @media all and (min-width: 500px) {
     .card {
         width: 40%;
+    }
+    title {
+        font-size: 19px
     }
 }
 
 @media all and (min-width: 1000px) {
     .card {
         width: 30%;
+    }
+    title {
+        font-size: 24px
     }
 }

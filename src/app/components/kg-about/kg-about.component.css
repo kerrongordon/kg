@@ -1,13 +1,13 @@
 .about_content {
     margin: 0 auto;
     max-width: 550px;
-    padding: 20px;
+    padding: 40px 20px 10px;
 }
 
 .about_content p {
-    font-size: 1.05rem;
-    font-weight: 300;
-    color: #595769;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(var(--font-cobg), 0.79);
     text-align: center;
     line-height: 1.8rem;
     letter-spacing: .01rem;
