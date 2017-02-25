@@ -6,7 +6,6 @@
  "display": "standalone",
  "Scope": "/",
  "start_url": "/#home",
- "name": "App",
  "icons": [
   {
    "src": "\/assets/icons/android-icon-36x36.png",
