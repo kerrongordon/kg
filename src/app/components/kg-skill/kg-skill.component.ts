@@ -18,9 +18,7 @@ export class KgSkillComponent implements OnInit, OnDestroy, AfterContentChecked 
     this.dataLoad = this._kgDataService.getSiteSkills().subscribe(data => this.skills = data);
   }
 
-  ngAfterContentChecked() {
-    console.log(this.skills);
-  }
+  ngAfterContentChecked() {  }
 
   ngOnDestroy() {
     this.dataLoad.unsubscribe();
