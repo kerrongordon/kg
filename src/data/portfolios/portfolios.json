@@ -1,5 +1,11 @@
 {
-    "portfolios": [{
+    "portfolios": [
+        {
+            "title": "Grncom Solutions",
+            "link": "grncom",
+            "url": "http://www.grncom.com"
+        },
+        {
             "title": "Probatus",
             "link": "probatus",
             "url": "https://probatus-ceb59.firebaseapp.com"
