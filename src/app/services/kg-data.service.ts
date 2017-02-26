@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -7,6 +7,7 @@ export class KgDataService {
 
   private siteTitle: string;
   private siteEmail: string;
+  private formSpree: string;
 
   constructor(private http: Http) { }
 
@@ -16,6 +17,10 @@ export class KgDataService {
 
   getSiteEmail() {
     return this.siteEmail = 'kgpsounds.com@gmail.com';
+  }
+
+  getFormSpree() {
+    return this.formSpree = 'https://formspree.io/', this.getSiteEmail;
   }
 
   getSiteDescription() {
@@ -30,6 +35,13 @@ export class KgDataService {
 
   getPortfolios() {
     return this.http.get('./data/portfolios/portfolios.json')
+      .map((res: Response) => res.json());
+  }
+
+  postEmail(data) {
+    const headers = new Headers({ 'Content-Type': 'application/json' });
+    const options = new RequestOptions({ headers: headers });
+    return this.http.post('https://formspree.io/kgpsounds.com@gmail.com', data, headers)
       .map((res: Response) => res.json());
   }
 

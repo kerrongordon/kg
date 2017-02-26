@@ -1,0 +1,8 @@
+<div class="notre">
+    <div [ngClass]="{'notify': true, 'isOpen':isOpen}">
+        <div class="content">
+            <p>{{ notifyMessage }}</p>
+        </div>
+        <button class="btn" type="button" (click)="closeNotify()">Close</button>
+    </div>
+</div>

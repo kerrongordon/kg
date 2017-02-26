@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, AfterViewInit, AfterContentChecked, OnDestroy } from '@angular/core';
+import { Component, OnInit, AfterViewInit, AfterContentChecked, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { KgDataService } from '../../services/kg-data.service';

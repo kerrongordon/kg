@@ -343,44 +343,15 @@ img[alt="cardimg"] {
     display: none;
 }
 
-.loader,
-.loader:after {
-    border-radius: 50%;
-    width: 4em;
-    height: 4em;
+.load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.loader {
-    position: absolute;
-    top: 46%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 10px;
-    text-indent: -9999em;
-    border-top: .5em solid rgba(42, 122, 226, 0.2);
-    border-right: .5em solid rgba(42, 122, 226, 0.2);
-    border-bottom: .5em solid rgba(42, 122, 226, 0.2);
-    border-left: .5em solid #2a7ae2;
-    transform: translateZ(0);
-    animation: load8 .5s infinite linear;
-}
-
-@-webkit-keyframes load8 {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes load8 {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+.load img {
+    width: 100px;
+    height: 100px;
 }
 
 .header {

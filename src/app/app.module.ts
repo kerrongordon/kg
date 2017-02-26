@@ -1,6 +1,6 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
 import { RouteRoutingModule, routingComponents } from './route/route-routing.module';
@@ -13,6 +13,8 @@ import { KgPortfolioComponent } from './components/kg-portfolio/kg-portfolio.com
 import { KgCardComponent } from './components/kg-card/kg-card.component';
 import { KgFooterComponent } from './components/kg-footer/kg-footer.component';
 import { KgContactComponent } from './components/kg-contact/kg-contact.component';
+import { KgNotifyComponent } from './components/kg-notify/kg-notify.component';
+import { NotifyDirective } from './directives/notify.directive';
 
 
 
@@ -28,12 +30,14 @@ import { KgContactComponent } from './components/kg-contact/kg-contact.component
     KgCardComponent,
     routingComponents,
     KgFooterComponent,
-    KgContactComponent
+    KgContactComponent,
+    KgNotifyComponent,
+    NotifyDirective
     // MarkdownToHtmlPipe
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     RouteRoutingModule,
     MarkdownToHtmlModule.forRoot()

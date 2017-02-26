@@ -1,19 +1,61 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
+import { FormBuilder, Validators,  } from '@angular/forms';
+import { KgDataService } from '../../services/kg-data.service';
 
 @Component({
   selector: 'app-kg-contact',
   templateUrl: './kg-contact.component.html',
-  styleUrls: ['./kg-contact.component.css']
+  styleUrls: ['./kg-contact.component.css'],
+  providers: [KgDataService]
 })
-export class KgContactComponent implements OnInit {
+export class KgContactComponent implements OnInit, OnChanges {
 
-  constructor() { }
+  public contactForm = this.fb.group({
+    name: [null, Validators.required],
+    email: [null, Validators.required],
+    message: [null, Validators.required]
+  });
 
-  ngOnInit() {
+  private sendEmail: any;
+  message: string;
+  update = true;
+
+  constructor(public fb: FormBuilder, private _kgDataService: KgDataService) { }
+
+  ngOnInit() {  }
+
+  ngOnChanges() {
+    console.log('updating');
   }
 
-  onSubmit(value: any) {
-    console.log(value);
+  onValid() {
+    if (
+      this.contactForm.value.name === null ||
+      this.contactForm.value.email === null ||
+      this.contactForm.value.message === null
+      ) {
+        this.message = 'Please Fill Out This Form Completely';
+        this.update = !this.update;
+        return true;
+      }
   }
+
+  onSubmit(value: any): void {
+    if (!this.onValid()) {
+      this.sendEmail = this._kgDataService.postEmail(this.contactForm.value).subscribe(
+        data => {
+          this.message = 'Email Has Been Sent';
+          this.update = !this.update;
+          this.contactForm.reset();
+          return true;
+        },
+        error => {
+          this.message = 'Error in Sending Email';
+          this.update = !this.update;
+        }
+      );
+    }
+  }
+
 
 }

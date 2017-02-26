@@ -2,20 +2,21 @@
 <section id="contact" class="contact">
     <img src="./assets/img/kerronb.svg" class="kerron" alt="kerron gordon">
     <div class="wrapper">
-        <form #userMessage="ngForm" (ngSubmit)="onSubmit(userMessage.value)">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit($event)">
             <div class="yname_group">
                 <label for="yname">Your Name</label>
-                <input id="yname" type="text" required name="name" ngModel>
+                <input id="yname" formControlName="name" type="text" name="name">
             </div>
             <div class="yemail_group">
                 <label for="yemail">Your Email</label>
-                <input id="yemail" type="email" required name="email" ngModel>
+                <input id="yemail" formControlName="email" type="email" required name="email">
             </div>
             <div class="ymessage_group">
                 <label for="ymessage">Your Message</label>
-                <textarea id="ymessage" required name="message" ngModel></textarea>
+                <textarea id="ymessage" formControlName="message" name="message"></textarea>
             </div>
-            <button type="submit" class="btn submit_btn">Send Message</button>
+            <button type="submit" class="btn submit_btn" [disabled]="!contactForm">Send Message</button>
         </form>
     </div>
 </section>
+<app-kg-notify [message]="message" [update]="update"></app-kg-notify>
