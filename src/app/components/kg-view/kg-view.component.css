@@ -99,7 +99,5 @@ img {
 @media all and (min-width: 1000px) {
     .ribbon {
         height: 400px;
-        background: url(/assets/img/kerronb.svg) 0% 60% no-repeat;
-        background-color: var(--accent-one);
     }
 }

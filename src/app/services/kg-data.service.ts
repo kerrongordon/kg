@@ -7,7 +7,6 @@ export class KgDataService {
 
   private siteTitle: string;
   private siteEmail: string;
-  private formSpree: string;
 
   constructor(private http: Http) { }
 
@@ -17,10 +16,6 @@ export class KgDataService {
 
   getSiteEmail() {
     return this.siteEmail = 'kgpsounds.com@gmail.com';
-  }
-
-  getFormSpree() {
-    return this.formSpree = 'https://formspree.io/', this.getSiteEmail;
   }
 
   getSiteDescription() {

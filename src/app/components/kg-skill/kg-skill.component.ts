@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterContentChecked } from '@angular/core';
 import { KgDataService } from '../../services/kg-data.service';
 
 @Component({
@@ -7,9 +7,9 @@ import { KgDataService } from '../../services/kg-data.service';
   styleUrls: ['./kg-skill.component.css'],
   providers: [KgDataService]
 })
-export class KgSkillComponent implements OnInit, OnDestroy {
+export class KgSkillComponent implements OnInit, OnDestroy, AfterContentChecked {
 
-  private skills: any[];
+  private skills: Skill;
   private dataLoad: any;
 
   constructor(private _kgDataService: KgDataService) { }
@@ -18,8 +18,17 @@ export class KgSkillComponent implements OnInit, OnDestroy {
     this.dataLoad = this._kgDataService.getSiteSkills().subscribe(data => this.skills = data);
   }
 
+  ngAfterContentChecked() {
+    console.log(this.skills);
+  }
+
   ngOnDestroy() {
     this.dataLoad.unsubscribe();
   }
 
+}
+
+interface Skill {
+  title: string;
+  level: string;
 }

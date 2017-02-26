@@ -11,7 +11,7 @@
 
 .card:hover,
 .card:focus {
-    transform: translateY(-2px);
+    transform: scale(1.05);
     box-shadow: 0 18px 35px rgba(50, 50, 93, .1), 0 8px 15px rgba(0, 0, 0, .07);
 }
 
@@ -27,9 +27,19 @@
     transition: all 0.3s ease-in-out;
 }
 
-.card:hover img,
-.card:focus img {
-    filter: grayscale(100%);
+.card .darker {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover .darker,
+.card:focus .darker {
+    background: rgba(0, 0, 0, 0);
 }
 
 .card_title {
@@ -81,9 +91,9 @@ title {
 
 @media all and (min-width: 1000px) {
     .card {
-        width: 30%;
+        width: 22%;
     }
     title {
-        font-size: 24px
+        font-size: 18px
     }
 }

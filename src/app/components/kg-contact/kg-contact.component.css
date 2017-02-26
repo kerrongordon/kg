@@ -36,7 +36,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-    transform: translateY(-3px);
+    transform: scale(1.05);
     box-shadow: 0 18px 35px rgba(50, 50, 93, .1), 0 8px 15px rgba(0, 0, 0, .07);
 }
 
@@ -49,19 +49,11 @@ textarea:focus {
     box-shadow: 0 18px 35px rgba(50, 50, 93, .1), 0 8px 15px rgba(0, 0, 0, .07);
 }
 
-.kerron {
-    display: none;
+.btncon {
+    display: flex;
+    justify-content: center;
 }
 
 @media all and (min-width: 500px) {}
 
-@media all and (min-width: 1000px) {
-    .kerron {
-        position: absolute;
-        display: block;
-        width: 500px;
-        z-index: 1;
-        bottom: -30px;
-        left: -100px;
-    }
-}
+@media all and (min-width: 1000px) {}

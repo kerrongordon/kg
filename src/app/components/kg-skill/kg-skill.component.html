@@ -1,5 +1,5 @@
 <div class="about_skill">
-    <div class="about_skill_item" *ngFor="let skill of skills">
+    <div class="about_skill_item" *ngFor="let skill of skills" title="{{skill.title}} {{skill.level}}">
         <h4>{{skill.title}} <span class="shadow">{{skill.level}}</span></h4>
         <div class="about_skill_item_bar"><span class="level shadow" [ngStyle]="{'width': skill.level+'%'}"></span></div>
     </div>

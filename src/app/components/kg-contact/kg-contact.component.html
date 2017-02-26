@@ -1,21 +1,19 @@
 <h2 class="header">Stay in touch</h2>
 <section id="contact" class="contact">
-    <img src="./assets/img/kerronb.svg" class="kerron" alt="kerron gordon">
     <div class="wrapper">
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit($event)">
             <div class="yname_group">
-                <label for="yname">Your Name</label>
-                <input id="yname" formControlName="name" type="text" name="name">
+                <input id="yname" formControlName="name" type="text" name="name" placeholder="Your Name">
             </div>
             <div class="yemail_group">
-                <label for="yemail">Your Email</label>
-                <input id="yemail" formControlName="email" type="email" required name="email">
+                <input id="yemail" formControlName="email" type="email" required name="email" placeholder="Your Email">
             </div>
             <div class="ymessage_group">
-                <label for="ymessage">Your Message</label>
-                <textarea id="ymessage" formControlName="message" name="message"></textarea>
+                <textarea id="ymessage" formControlName="message" name="message" placeholder="Your Message"></textarea>
             </div>
-            <button type="submit" class="btn submit_btn" [disabled]="!contactForm">Send Message</button>
+            <div class="btncon">
+                <button type="submit" class="btn submit_btn" [disabled]="!contactForm">Send Message</button>
+            </div>
         </form>
     </div>
 </section>
