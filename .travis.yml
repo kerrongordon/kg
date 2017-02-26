@@ -4,6 +4,8 @@ node_js:
   - "6"
 script:
     - npm install -g @angular/cli
+    - npm install -g node-gyp
+    - npm install -g marked
     - npm install
 install:
     - npm install -g sw-precache
