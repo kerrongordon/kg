@@ -12,7 +12,7 @@ export class KgAvatarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.avatarUrl = './assets/img/kerronb.svg';
+    return this.avatarUrl = './assets/img/kerronb.svg';
   }
 
 }

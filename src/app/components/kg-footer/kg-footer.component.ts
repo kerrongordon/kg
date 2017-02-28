@@ -7,15 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KgFooterComponent implements OnInit {
 
-  year: string;
+  getyear: string;
   copyRight: string;
 
-  constructor() { }
+  constructor() {
+    this.getyear = new Date().getFullYear().toString();
+  }
 
   ngOnInit() {
-  	const year = new Date().getFullYear();
-  	this.year = year.toString();
-  	this.copyRight = `Copyright © ${year} By Kerron Gordon`;
+    return this.copyRight = `Copyright © ${this.getyear} By Kerron Gordon`;
   }
 
 }

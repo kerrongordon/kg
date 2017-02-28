@@ -14,7 +14,7 @@ export class KgHeroComponent implements OnInit {
   constructor(private _kgDataService: KgDataService) { }
 
   ngOnInit() {
-    this.title = this._kgDataService.getSiteTitle();
+    return this.title = this._kgDataService.getSiteTitle();
   }
 
 }

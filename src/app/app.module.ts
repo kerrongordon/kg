@@ -17,8 +17,6 @@ import { KgNotifyComponent } from './components/kg-notify/kg-notify.component';
 import { NotifyDirective } from './directives/notify.directive';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +31,6 @@ import { NotifyDirective } from './directives/notify.directive';
     KgContactComponent,
     KgNotifyComponent,
     NotifyDirective
-    // MarkdownToHtmlPipe
   ],
   imports: [
     BrowserModule,
@@ -41,7 +38,6 @@ import { NotifyDirective } from './directives/notify.directive';
     HttpModule,
     RouteRoutingModule,
     MarkdownToHtmlModule.forRoot()
-    // MarkdownModule.forRoot()
   ],
   providers: [Title],
   bootstrap: [AppComponent]

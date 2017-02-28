@@ -91,7 +91,7 @@ title {
 
 @media all and (min-width: 1000px) {
     .card {
-        width: 22%;
+        width: 20%;
     }
     title {
         font-size: 18px
