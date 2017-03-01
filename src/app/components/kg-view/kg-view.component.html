@@ -19,7 +19,7 @@
             <div class="page">
                 <div class="page_in">
                     <markdown-to-html src="/data/portfolios/{{ portfolio.link }}/{{ portfolio.link }}.md"></markdown-to-html>
-                    <img src="/data/portfolios/{{ portfolio.link }}/desktop.jpg" alt="{{ portfolio.title }}">
+                    <img lazyLoad="/data/portfolios/{{ portfolio.link }}/desktop.jpg" offset="100">
                     <div class="openlink">
                         <button class="btn" type="button" title="Open {{ portfolio.title }} In New Tab" (click)="openlink(portfolio.url)">
                 <svg viewBox="0 0 24 24">

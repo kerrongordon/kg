@@ -1,6 +1,7 @@
 <a class="card" *ngFor="let portfolio of portfolios" routerLink="/portfolio/{{portfolio.link}}">
     <div class="card_img">
-        <img src="./data/portfolios/{{portfolio.link}}/thumb.jpg" alt="{{ portfolio.title }} thumbnail">
+        <!--<img src="./data/portfolios/{{portfolio.link}}/thumb.jpg" alt="{{ portfolio.title }} thumbnail">-->
+        <img lazyLoad="./data/portfolios/{{portfolio.link}}/thumb.jpg" offset="100" alt="{{ portfolio.title }} thumbnail">
         <div class="darker"></div>
         <div class="card_title">
             <title>{{ portfolio.title }}</title>

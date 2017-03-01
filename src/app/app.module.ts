@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
+import { LazyLoadImageModule } from 'ng2-lazyload-image';
 import { RouteRoutingModule, routingComponents } from './route/route-routing.module';
 import { AppComponent } from './app.component';
 import { KgHeroComponent } from './components/kg-hero/kg-hero.component';
@@ -37,6 +38,7 @@ import { NotifyDirective } from './directives/notify.directive';
     ReactiveFormsModule,
     HttpModule,
     RouteRoutingModule,
+    LazyLoadImageModule,
     MarkdownToHtmlModule.forRoot()
   ],
   providers: [Title],

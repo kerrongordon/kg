@@ -28,6 +28,7 @@
     "angularfire2": "^2.0.0-beta.8",
     "core-js": "^2.4.1",
     "firebase": "^3.6.10",
+    "ng2-lazyload-image": "^2.4.0",
     "ng2-markdown-to-html": "0.0.9",
     "rxjs": "^5.2.0",
     "ts-helpers": "^1.1.2",

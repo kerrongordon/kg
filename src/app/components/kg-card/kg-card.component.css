@@ -22,8 +22,7 @@
 
 .card_img img {
     width: 100%;
-    background-color: #2a7ae2;
-    filter: grayscale(0%);
+    background-color: var(--accent-one);
     transition: all 0.3s ease-in-out;
 }
 
