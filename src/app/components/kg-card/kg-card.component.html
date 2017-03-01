@@ -4,7 +4,7 @@
         <img lazyLoad="./data/portfolios/{{portfolio.link}}/thumb.jpg" offset="100" alt="{{ portfolio.title }} thumbnail">
         <div class="darker"></div>
         <div class="card_title">
-            <title>{{ portfolio.title }}</title>
+            <div class="title">{{ portfolio.title | truncate : 15 }}</div>
         </div>
     </div>
     <div class="card_btn">View Project</div>

@@ -179,7 +179,7 @@ body {
 }
 
 blockquote {
-    border-left: 4px solid #6a7e95;
+    border-left: 4px solid var(--font-cobg);
     padding-left: 20px;
     padding-right: 5px;
     padding-bottom: 5px;
@@ -231,7 +231,7 @@ ol li:hover a {
 }
 
 small {
-    color: #6a7e95;
+    color: var(--font-cobg);
     font-size: 14px;
 }
 
@@ -242,7 +242,7 @@ h4,
 h5,
 h6 {
     font-weight: 300;
-    color: #526475;
+    color: var(--font-cobg);
     display: block;
     margin-bottom: 20px;
     margin-top: 0px;

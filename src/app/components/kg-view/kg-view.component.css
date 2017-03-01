@@ -96,6 +96,10 @@ img {
     height: 50px;
 }
 
+.desktop {
+    display: none;
+}
+
 @media all and (min-width: 500px) {
     .ribbon {
         height: 350px;
@@ -105,5 +109,11 @@ img {
 @media all and (min-width: 1000px) {
     .ribbon {
         height: 400px;
+    }
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: inline-block;
     }
 }
