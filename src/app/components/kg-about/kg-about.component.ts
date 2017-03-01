@@ -17,4 +17,8 @@ export class KgAboutComponent implements OnInit {
     return this._kgDataService.getSiteDescription().subscribe(data => this.content = data.description);
   }
 
+  openlink(link): void {
+    window.open(link);
+  }
+
 }
