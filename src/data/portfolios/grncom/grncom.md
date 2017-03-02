@@ -1,4 +1,5 @@
 ### Grncom Solutions
+---
 
 Grncom Solutions is a WordPress theme build with Bones as a start template.
 

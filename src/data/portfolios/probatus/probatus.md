@@ -1,4 +1,5 @@
-### Tools Use to build Probatus
+### Probatus
+---
 
 Probatus is a static html5 and css3 template build with Google Web Starter Kit
 

@@ -1,6 +1,9 @@
 ### St Rose Modern Secondary School
+---
 
 StRose is a WordPress theme build with underscores as a start template.
+
+
 
 * [underscores](http://underscores.me/) - create your underscores based theme
 * [live preview](http://strosemodern.org/) - live preview of St Rose Modern Secondary School
@@ -14,3 +17,4 @@ StRose is a WordPress theme build with underscores as a start template.
 * [Responsive Menu](https://wordpress.org/plugins/responsive-menu/)
 * [Revolution Slider](http://revolution.themepunch.com/)
 * [Knight Lab TimelineJS](https://timeline.knightlab.com/)
+

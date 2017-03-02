@@ -223,6 +223,7 @@ ol li {
     line-height: 28px;
     color: var(--font-cobg);
     list-style: disc;
+    font-size: 14px;
 }
 
 ul li:hover a,
@@ -399,4 +400,75 @@ p {
 
 img {
     width: 100%;
+}
+
+.page_in {
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.page_in h1 {
+    margin-top: 0;
+    font-weight: normal;
+}
+
+.page_in h2 {
+    font-weight: normal;
+}
+
+.page_in h3 {
+    font-weight: normal;
+    margin-top: 1em;
+}
+
+.page_in p {
+    font-size: 18px;
+    margin-top: 0;
+    -webkit-hypens: auto;
+    -moz-hypens: auto;
+    hyphens: auto;
+}
+
+.page_in ul {
+    list-style: square;
+    padding-left: 1.2em;
+}
+
+.page_in ol {
+    padding-left: 1.2em;
+}
+
+.page_in blockquote {
+    margin-left: 1em;
+    padding-left: 1em;
+}
+
+.page_in blockquote p {
+    margin: 0;
+}
+
+.page_in code {
+    font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
+    font-size: .9em;
+    background: white;
+}
+
+.page_in a img {
+    border: none;
+}
+
+.page_in h1 a,
+.page_in h1 a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.page_in hr {
+    color: #ddd;
+    height: 1px;
+    margin: 2em 0;
+    border-top: solid 1px #ddd;
+    border-bottom: none;
+    border-left: 0;
+    border-right: 0;
 }
