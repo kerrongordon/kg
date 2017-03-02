@@ -313,12 +313,17 @@ pre {
     overflow-x: auto;
 }
 
-.truncat {
-    width: 70%;
+.flex-parent {
+    display: flex;
+    align-items: center;
+}
+
+.flex-child {
+    flex: 1;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: clip;
-    display: inline-block;
+    text-overflow: ellipsis;
+    padding-right: 40px;
 }
 
 hr {

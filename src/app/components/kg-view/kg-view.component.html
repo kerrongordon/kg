@@ -5,10 +5,11 @@
                 <div id="nav" class="headbar">
                     <div class="wrapper">
                         <span class="page_close gohome"><a title="Go Back To Home" routerLink="/" fragment="home"><svg style="width:30px;height:30px" viewBox="0 0 24 24"><path d="M11,13H13V16H16V11H18L12,6L6,11H8V16H11V13M12,1L21,5V11C21,16.55 17.16,21.74 12,23C6.84,21.74 3,16.55 3,11V5L12,1Z" /></svg></a></span>
-                        <span class="page_title mobile">{{ portfolio.title | truncate : 15 }}</span>
-                        <span class="page_title desktop">{{ portfolio.title }}</span>
+                        <div class="flex-parent">
+                            <span class="page_title flex-child">{{ portfolio.title }}</span>
 
-                        <span class="page_close"><a title="Go Back To Portfolio" routerLink="/" fragment="portfolio"><svg style="width:30px;height:56px" viewBox="0 0 24 24"><path d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z" /></svg></a></span>
+                            <span class="page_close"><a title="Go Back To Portfolio" routerLink="/" fragment="portfolio"><svg style="width:30px;height:56px" viewBox="0 0 24 24"><path d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z" /></svg></a></span>
+                        </div>
                     </div>
                 </div>
             </div>

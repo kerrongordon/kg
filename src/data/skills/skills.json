@@ -1,34 +1,33 @@
-[
-  {
-    "title": "Communication",
-    "level": "70"
-  },
-  {
-    "title": "Organization",
-    "level": "80"
-  },
-  {
-    "title": "Learning",
-    "level": "75"
-  },
-  {
-    "title": "Teaching",
-    "level": "65"
-  },
-  {
-    "title": "Planning",
-    "level": "75"
-  },
-  {
-    "title": "Visual Design",
-    "level": "50"
-  },
-  {
-    "title": "UX Design",
-    "level": "80"
-  },
-  {
-    "title": "Programming",
-    "level": "67"
-  }
+[{
+        "title": "Communication",
+        "level": "68"
+    },
+    {
+        "title": "Organization",
+        "level": "75"
+    },
+    {
+        "title": "Learning",
+        "level": "70"
+    },
+    {
+        "title": "Teaching",
+        "level": "65"
+    },
+    {
+        "title": "Planning",
+        "level": "75"
+    },
+    {
+        "title": "Visual Design",
+        "level": "80"
+    },
+    {
+        "title": "UX Design",
+        "level": "60"
+    },
+    {
+        "title": "Programming",
+        "level": "74"
+    }
 ]

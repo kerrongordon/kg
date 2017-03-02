@@ -10,7 +10,7 @@ install:
     - npm install -g sw-precache
     - npm install -g firebase-tools
 after_success:
-    - ng build -prod --aot --verbose
+    - ng build -prod --aot
     - sw-precache --root=dist --static-file-globs='dist/**/*.*'
     - firebase deploy --token "$FIREBASE_TOKEN"
 

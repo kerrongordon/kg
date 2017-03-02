@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
 import { LazyLoadImageModule } from 'ng2-lazyload-image';
 import { RouteRoutingModule, routingComponents } from './route/route-routing.module';
-import { TruncatePipe } from 'angular2-truncate';
 import { AppComponent } from './app.component';
 import { KgHeroComponent } from './components/kg-hero/kg-hero.component';
 import { KgAvatarComponent } from './components/kg-avatar/kg-avatar.component';
@@ -22,7 +21,6 @@ import { NotifyDirective } from './directives/notify.directive';
 @NgModule({
   declarations: [
     AppComponent,
-    TruncatePipe,
     KgHeroComponent,
     KgAvatarComponent,
     KgAboutComponent,
