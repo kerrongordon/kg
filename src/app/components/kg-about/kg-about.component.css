@@ -5,11 +5,7 @@
 }
 
 .about_content p {
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--font-cobg);
     text-align: center;
-    line-height: 1.8rem;
     letter-spacing: .01rem;
 }
 

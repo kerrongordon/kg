@@ -9,6 +9,7 @@ import { KgDataService } from '../../services/kg-data.service';
   styleUrls: ['./kg-view.component.css'],
   providers: [KgDataService]
 })
+
 export class KgViewComponent implements OnInit, AfterViewInit {
 
   private Portfolios: Portfolio[];

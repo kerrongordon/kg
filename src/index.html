@@ -84,8 +84,19 @@
             });
         }
     </script>
-    <script src="/assets/js/analytics.js"></script>
-    <script src="/assets/js/facebook.js"></script>
+    <script type="text/javascript">
+        (function() {
+            var po = document.createElement('script');
+            po.type = 'text/javascript';
+            po.async = true;
+            po.src = 'https://apis.google.com/js/platform.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+    <script type="text/javascript" async src="/assets/js/analytics.js"></script>
+    <script type="text/javascript" async src="/assets/js/facebook.js"></script>
+    <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
 </body>
 
 </html>

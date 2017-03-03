@@ -16,6 +16,7 @@ import { KgFooterComponent } from './components/kg-footer/kg-footer.component';
 import { KgContactComponent } from './components/kg-contact/kg-contact.component';
 import { KgNotifyComponent } from './components/kg-notify/kg-notify.component';
 import { NotifyDirective } from './directives/notify.directive';
+import { KgShareComponent } from './components/kg-share/kg-share.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { NotifyDirective } from './directives/notify.directive';
     KgFooterComponent,
     KgContactComponent,
     KgNotifyComponent,
-    NotifyDirective
+    NotifyDirective,
+    KgShareComponent
   ],
   imports: [
     BrowserModule,

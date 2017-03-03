@@ -6,6 +6,7 @@
     height: 56px;
     margin: 0;
     color: #fff;
+    z-index: 9999;
 }
 
 .navShadow {
@@ -40,13 +41,9 @@
 }
 
 .page_in {
-    background: #fff;
-    max-width: 1050px;
+    max-width: 960px;
     margin: 0 auto;
-    margin-top: -180px;
-    border-radius: 2px;
-    padding: 20px;
-    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
+    overflow: hidden;
 }
 
 .page_close {
@@ -75,30 +72,28 @@ img {
     margin: 13px 5px;
 }
 
-.openlink {
-    position: fixed;
-    z-index: 500;
-    right: 20px;
-    bottom: 20px;
-}
-
-.openlink svg {
-    fill: var(--font-coac);
-    width: 20px;
-    height: 20px;
-}
-
-.openlink .btn {
-    background-color: var(--accent-two);
-    color: var(--font-coac);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+markdown-to-html {
+    display: block;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 40px;
 }
 
 @media all and (min-width: 500px) {
     .ribbon {
         height: 350px;
+    }
+    .page_in {
+        background: #fff;
+        margin-top: -180px;
+        border-radius: 4px 4px 10px 10px;
+        box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
+    }
+    markdown-to-html {
+        padding: 20px;
+        margin-top: 10px;
     }
 }
 

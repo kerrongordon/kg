@@ -3,7 +3,7 @@
     position: relative;
     margin: 20px;
     width: 100%;
-    border-radius: 3px;
+    border-radius: 4px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -20,7 +20,7 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 36px;
+    bottom: 0;
     transition: all 0.3s ease-in-out;
 }
 
