@@ -13,6 +13,7 @@ import { KgDataService } from '../../services/kg-data.service';
 export class KgViewComponent implements OnInit, AfterViewInit {
 
   private Portfolios: Portfolio[];
+  private title: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,6 +28,10 @@ export class KgViewComponent implements OnInit, AfterViewInit {
         data =>  {
           this.Portfolios = data.portfolios
             .filter(name => name.link === rountParams);
+
+          this.title = this.Portfolios['0'].title;
+          const title = `${this.title} | Portfolio`;
+          titleService.setTitle( title );
 
           if (this.Portfolios.length === 0) {
             this.router.navigate(['/home']);
@@ -49,6 +54,14 @@ export class KgViewComponent implements OnInit, AfterViewInit {
 
   openlink(link): void {
     window.open(link);
+  }
+
+  goBackToPortfolio(): void {
+    this.router.navigate(['/'], { fragment: 'portfolio' });
+  }
+
+  goBackToHome(): void {
+    this.router.navigate(['/'], { fragment: 'home' });
   }
 
 }

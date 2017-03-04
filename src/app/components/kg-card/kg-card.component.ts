@@ -1,21 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { KgDataService } from '../../services/kg-data.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-kg-card',
   templateUrl: './kg-card.component.html',
-  styleUrls: ['./kg-card.component.css'],
-  providers: [KgDataService]
+  styleUrls: ['./kg-card.component.css']
 })
 export class KgCardComponent implements OnInit {
 
-  private portfolios: any;
+  @Input() portfolios: any;
 
-  constructor(private _KgDataService: KgDataService) { }
+  constructor(private route: Router) { }
 
-  ngOnInit() {
-    return this._KgDataService.getPortfolios().subscribe(data => this.portfolios = data.portfolios);
-  }
+  ngOnInit() { }
+
+   goToPortfolio(link): void {
+    this.route.navigate(['/portfolio/', link]);
+   }
 
 }
-
