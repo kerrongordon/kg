@@ -19,19 +19,21 @@ export class KgViewComponent implements OnInit, AfterViewInit {
     private route: ActivatedRoute,
     private router: Router,
     private titleService: Title,
-    private _KgDataService: KgDataService) {
+    private _KgDataService: KgDataService) { }
 
-      const rountParams = route.snapshot.params['id'];
-      const Portfolios$ = _KgDataService.getPortfolios();
+  ngOnInit() {
 
-      Portfolios$.subscribe(
+    const rountParams = this.route.snapshot.params['id'];
+    const Portfolios$ = this._KgDataService.getPortfolios();
+
+    Portfolios$.subscribe(
         data =>  {
           this.Portfolios = data.portfolios
             .filter(name => name.link === rountParams);
 
           this.title = this.Portfolios['0'].title;
           const title = `${this.title} | Portfolio`;
-          titleService.setTitle( title );
+          this.titleService.setTitle( title );
 
           if (this.Portfolios.length === 0) {
             this.router.navigate(['/home']);
@@ -39,9 +41,7 @@ export class KgViewComponent implements OnInit, AfterViewInit {
         }
       );
 
-     }
-
-  ngOnInit() {  }
+   }
 
   ngAfterViewInit() {
 

@@ -396,6 +396,12 @@ img {
     vertical-align: text-bottom;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media all and (min-width: 500px) {
     h1 {
         font-size: 32px;

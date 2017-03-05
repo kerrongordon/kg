@@ -14,10 +14,6 @@ export class KgPortfolioComponent implements OnInit {
   constructor(private _KgDataService: KgDataService) { }
 
   ngOnInit() {
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'X-UA-Compatible';
-    meta.content = 'IE=edge';
-    document.getElementsByTagName('head')[0].appendChild(meta);
     return this._KgDataService.getPortfolios().subscribe(data => this.portfolios = data.portfolios);
   }
 

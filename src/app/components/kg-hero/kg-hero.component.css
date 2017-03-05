@@ -1,5 +1,5 @@
 .hero {
-    background: url(/assets/img/dark-mosaic.png) 50% 50%;
+    background: url(/assets/img/hero.jpg) 50% 50%/cover;
     background-color: var(--accent-one);
     width: 100%;
     height: 300px;
