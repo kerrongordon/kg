@@ -90,12 +90,16 @@ markdown-to-html {
     .page_in {
         background: #fff;
         margin-top: -180px;
-        border-radius: 4px 4px 10px 10px;
+        border-radius: 5px;
         box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
     }
     markdown-to-html {
         padding: 20px;
         margin-top: 10px;
+    }
+
+    .image_in_page {
+        margin-top: 40px;;
     }
 }
 

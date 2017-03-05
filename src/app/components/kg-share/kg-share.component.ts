@@ -10,13 +10,15 @@ export class KgShareComponent implements OnInit {
 
   @Input() share: any;
   public rountParams;
-  public domain = 'kerrongordon-8f9c4.firebaseapp.com';
 
   constructor(private route: Router) {  }
 
   ngOnInit() {
-    const rountParams = this.route.url;
-    return this.rountParams = this.domain + rountParams;
+    return this.rountParams = window.location.href;
+  }
+
+  shareMe(url): void {
+    window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=550,width=400');
   }
 
   openlink(link): void {
