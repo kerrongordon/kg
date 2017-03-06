@@ -1,24 +1,25 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Title } from '@angular/platform-browser';
 import { KgDataService } from '../../services/kg-data.service';
+import { KgSeoService } from '../../services/kg-seo.service';
 
 @Component({
   selector: 'app-kg-view',
   templateUrl: './kg-view.component.html',
   styleUrls: ['./kg-view.component.css'],
-  providers: [KgDataService]
+  providers: [KgDataService, KgSeoService]
 })
 
 export class KgViewComponent implements OnInit, AfterViewInit {
 
   private Portfolios: Portfolio[];
   private title: string;
+  private image: string;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private titleService: Title,
+    private seo: KgSeoService,
     private _KgDataService: KgDataService) { }
 
   ngOnInit() {
@@ -32,8 +33,16 @@ export class KgViewComponent implements OnInit, AfterViewInit {
             .filter(name => name.link === rountParams);
 
           this.title = this.Portfolios['0'].title;
+          this.image = `${window.location.protocol}//${window.location.host}/data/portfolios/${this.Portfolios['0'].link}/desktop.jpg`;
           const title = `${this.title} | Portfolio`;
-          this.titleService.setTitle( title );
+
+          this.seo.setTitle(title);
+          this.seo.setMetaDescription(this.title);
+          this.seo.setMetaImage(this.image);
+          this.seo.setMetaUrl(window.location.href);
+          this.seo.setOgType();
+          this.seo.setTwitterCard();
+          this.seo.setTwitterCreator();
 
           if (this.Portfolios.length === 0) {
             this.router.navigate(['/home']);
