@@ -1,5 +1,3 @@
-// import {Injectable, Inject, ElementRef, Renderer} from '@angular/core';
-// import {DOCUMENT} from '@angular/platform-browser';
 import { Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { getDOM } from '@angular/platform-browser/src/dom/dom_adapter';
