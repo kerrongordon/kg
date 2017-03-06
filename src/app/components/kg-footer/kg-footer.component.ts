@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-kg-footer',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./kg-footer.component.css']
 })
 export class KgFooterComponent implements OnInit {
+
+  @Input() message;
+  @Input() update;
 
   getyear: string;
   copyRight: string;
@@ -15,7 +18,14 @@ export class KgFooterComponent implements OnInit {
   }
 
   ngOnInit() {
-    return this.copyRight = `Copyright © ${this.getyear} By Kerron Gordon`;
+    window.addEventListener('load', () => {
+      window.addEventListener('offline', () => {
+        const condition = navigator.onLine ? 'Live' : 'You Are Currently offline';
+        this.message = condition;
+        this.update = !this.update;
+      });
+    });
+    this.copyRight = `Copyright © ${this.getyear} By Kerron Gordon`;
   }
 
 }

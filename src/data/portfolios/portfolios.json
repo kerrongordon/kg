@@ -19,6 +19,11 @@
             "title": "St Rose Modern Secondary School",
             "link": "strose",
             "url": "http://strosemodern.org"
+        },
+        {
+            "title": "Tech Ventures Inc",
+            "link": "tech-ventures",
+            "url": "https://kerrongordon.github.io/starter/"
         }
     ]
 }

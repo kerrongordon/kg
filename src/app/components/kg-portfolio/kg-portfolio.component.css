@@ -4,4 +4,5 @@
     justify-content: center;
     flex-wrap: wrap;
     padding-bottom: 90px;
+    perspective: 70em;
 }

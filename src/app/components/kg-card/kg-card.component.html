@@ -1,4 +1,4 @@
-<a class="card" *ngFor="let portfolio of portfolios" (click)="goToPortfolio(portfolio.link)">
+<a class="card" href="javascript:void(0)" *ngFor="let portfolio of portfolios" (click)="goToPortfolio(portfolio.link)">
     <div class="card_img">
         <img src="./data/portfolios/{{portfolio.link}}/thumb.jpg" alt="{{ portfolio.title }} thumbnail">
         <div class="darker"></div>

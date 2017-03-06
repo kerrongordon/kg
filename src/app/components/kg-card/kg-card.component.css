@@ -1,5 +1,4 @@
 .card {
-    background: #fff;
     position: relative;
     margin: 20px;
     width: 100%;
@@ -15,13 +14,24 @@
 }
 
 .card .darker {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 1px;
+    bottom: 2px;
     transition: all 0.3s ease-in-out;
+}
+
+.card img {
+    filter: blur(0px);
+    overflow: hidden;
+    transition: all 0.7s ease-in-out;
+}
+
+.card:hover img,
+.card:focus img {
+    filter: blur(10px);
 }
 
 .card_title {
@@ -55,7 +65,7 @@
 
 .card:hover .darker,
 .card:focus .darker {
-    background: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 @media all and (min-width: 500px) {
