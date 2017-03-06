@@ -20,9 +20,19 @@ export class KgContactComponent implements OnInit, OnChanges {
   message: string;
   update = true;
 
+  private condition: string;
+
   constructor(public fb: FormBuilder, private _kgDataService: KgDataService) { }
 
-  ngOnInit() {  }
+  ngOnInit() {
+    window.addEventListener('load', () => {
+      window.addEventListener('offline', () => {
+        const condition = navigator.onLine ? 'Live' : 'You Are Currently offline';
+        this.message = condition;
+        this.update = !this.update;
+      });
+    });
+  }
 
   ngOnChanges() {
     console.log('updating');

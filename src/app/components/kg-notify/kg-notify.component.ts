@@ -10,6 +10,7 @@ export class KgNotifyComponent implements OnInit, OnChanges {
   public notifyMessage: string;
   public isOpen = true;
   public appNotify: string;
+  private time;
   @Input() message;
   @Input() update;
 
@@ -18,16 +19,23 @@ export class KgNotifyComponent implements OnInit, OnChanges {
   ngOnChanges() {
     this.notifyMessage = this.message;
     this.isOpen = !this.isOpen;
-
-    if (this.isOpen) {
-      setTimeout(() => { this.isOpen = false; }, 5000);
-    }
+    this.timeOut();
   }
 
   ngOnInit() { }
 
+  timeOut() {
+    if (this.isOpen) {
+      this.time = setTimeout(() => {
+        this.isOpen = false;
+        clearTimeout(this.time);
+      }, 5000);
+    }
+  }
+
   closeNotify(): void {
     this.isOpen = !this.isOpen;
+    clearTimeout(this.time);
   }
 
 }
